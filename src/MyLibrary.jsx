@@ -1,17 +1,31 @@
-// src/MyLibrary.jsx
 import React from 'react';
 import './css/cards.css';
-import './club.svg';
 
 export const MyLibrary = () => {
   return <div>This is my React library!</div>;
 };
 
-export const Back = () => {
+export const Ace = () => {
   return (
-    <div className="card">
-      <img src={require('./assets/club.svg').default} alt="My SVG" />
-      <div className="card-back"></div>
+    <div class="card card-a" style="color: #333;">
+      <div class="card-middle">
+        <div class="card-suit" style="left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(0)">
+        <img src="./assets/fa/spade.svg" />
+        </div>
+      </div>
+      <div class="card-corner card-topleft">
+        <div class="card-rank">A</div>
+        <div class="card-suit">
+          <img src="./assets/fa/spade.svg" />
+
+        </div>
+      </div>
+      <div class="card-corner card-bottomright">
+        <div class="card-rank">A</div>
+        <div class="card-suit">
+          <img src="./assets/fa/spade.svg" />
+        </div>
+      </div>
     </div>
   )
 }

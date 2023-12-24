@@ -25,11 +25,12 @@ export default {
         }),
         svgr(), // Handle SVG files
         copy({
-            targets: [
-                { src: 'src/assets/**/*.woff', dest: 'dist/assets' },
-                { src: 'src/assets/**/*.woff2', dest: 'dist/assets' },
-                { src: 'src/assets/**/*.ttf', dest: 'dist/assets' },
-                { src: 'src/assets/**/*.svg', dest: 'dist/assets' },
-            ],
-        }),],
+            targets: [{ src: 'src/assets/**/*.woff', dest: 'dist/assets/woff' }],
+            flatten: false,
+        }),
+        copy({
+            targets: [{ src: 'src/assets/**/*.svg', dest: 'dist/assets/svg' }],
+            flatten: false,
+        })
+    ]
 };
