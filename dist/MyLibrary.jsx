@@ -2848,5 +2848,13 @@ if (process.env.NODE_ENV === 'production') {
 const MyLibrary = () => {
   return /*#__PURE__*/react.createElement("div", null, "This is my React library!");
 };
+const Back = () => {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "card"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "card-back"
+  }));
+};
 
+exports.Back = Back;
 exports.MyLibrary = MyLibrary;

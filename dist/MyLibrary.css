@@ -7,7 +7,7 @@ body {
   background-color: #ddd;
 }
 
-.card {
+.cards_card__hAvNq {
   position: relative;
   display: inline-block;
   width: 100px;
@@ -16,37 +16,37 @@ body {
   background-color: #fff;
 }
 
-.card-bottomright {
+.cards_card-bottomright__U2ibZ {
   position: absolute;
   bottom: 0;
   right: 0;
   transform: rotate(180deg);
 }
 
-.card-topleft {
+.cards_card-topleft__P7C3z {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.card-corner .card-suit, .card-corner .card-rank {
+.cards_card-corner__Xv4xR .cards_card-suit__S86hU, .cards_card-corner__Xv4xR .cards_card-rank__2YPol {
   width: 18px;
   text-align: center;
   display: block;
 }
 
-.card-corner .card-suit {
+.cards_card-corner__Xv4xR .cards_card-suit__S86hU {
   margin-left: 0.5px;
 }
 
-.card-rank {
+.cards_card-rank__2YPol {
   font-size: 16px;
   padding-top: 2px;
   font-weight: 600;
   letter-spacing: -1.75px; 
 }
 
-.card-back {
+.cards_card-back__Uqki1 {
   position: absolute;
   top: 4px;
   left: 4px;
@@ -59,11 +59,11 @@ body {
   background-size: 8px 8px;
 }
 
-.card-corner .card-suit img {
+.cards_card-corner__Xv4xR .cards_card-suit__S86hU img {
   height: 12px;
 }
 
-.card-middle {
+.cards_card-middle__HTBA9 {
   position: absolute;
   left: 32.5%;
   top: 20%;
@@ -71,7 +71,7 @@ body {
   height: 60%;
 }
 
-.card-royal {
+.cards_card-royal__GrDI0 {
   position: absolute;
   top: 0;
   left: 0;
@@ -82,23 +82,23 @@ body {
   background-size: 75%;
 }
 
-.card-joker .card-royal {
+.cards_card-joker__AT4cw .cards_card-royal__GrDI0 {
   background-position: 60% 50%;
 }
 
-.card-middle .card-suit {
+.cards_card-middle__HTBA9 .cards_card-suit__S86hU {
   position: absolute;
 }
 
-.card-a .card-middle .card-suit img {
+.cards_card-a__cYf8p .cards_card-middle__HTBA9 .cards_card-suit__S86hU img {
   height: 30px;
 }
 
-.card-middle .card-suit img {
+.cards_card-middle__HTBA9 .cards_card-suit__S86hU img {
   height: 20px;
 }
 
-.card-joker .card-rank {
+.cards_card-joker__AT4cw .cards_card-rank__2YPol {
   margin-left: -2px;
   margin-top: 2px;
   font-size: 10px;
