@@ -1,6 +1,6 @@
 import './App.css'
-import { Back } from '../../src/MyLibrary'
-// import { Back } from 'my-react-library-test-project';
+// import { Back } from '../../src/MyLibrary'
+import { Back } from 'my-react-library-test-project';
 
 function App() {
 

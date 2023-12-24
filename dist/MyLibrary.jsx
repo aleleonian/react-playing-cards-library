@@ -2851,7 +2851,10 @@ const MyLibrary = () => {
 const Back = () => {
   return /*#__PURE__*/react.createElement("div", {
     className: "card"
-  }, /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("img", {
+    src: require('./assets/club.svg').default,
+    alt: "My SVG"
+  }), /*#__PURE__*/react.createElement("div", {
     className: "card-back"
   }));
 };
