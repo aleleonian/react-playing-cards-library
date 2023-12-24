@@ -1,11 +1,4 @@
-/* @import '.inter.css'; */
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  font-size: 0;
-  background-color: blue;
-}
+@import '.inter.css';
 
 .card {
   position: relative;
@@ -15,6 +8,15 @@ body {
   margin: 8px;
   background-color: #fff;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 0;
+  background-color: yellow;
+}
+
+
 
 .card-bottomright {
   position: absolute;

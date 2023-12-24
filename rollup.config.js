@@ -28,6 +28,9 @@ export default {
         copy({
             targets: [{ src: 'src/assets/**/*.woff', dest: 'dist/' }],
             flatten: false,
+        }),        copy({
+            targets: [{ src: 'src/assets/**/*.woff2', dest: 'dist/' }],
+            flatten: false,
         }),
         copy({
             targets: [{ src: 'src/assets/**/*.svg', dest: 'dist/' }],
