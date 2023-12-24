@@ -20,16 +20,25 @@ export default {
             presets: ['@babel/preset-env', '@babel/preset-react'],
         }),
         postcss({
-            extract: true,
-            modules: true,
-        }),
+            // extract: true, // Extract CSS to separate file
+            modules: true, // Enable CSS modules if needed
+            // minimize: true, // Minify the CSS
+          }),
         svgr(), // Handle SVG files
         copy({
-            targets: [{ src: 'src/assets/**/*.woff', dest: 'dist/assets/woff' }],
+            targets: [{ src: 'src/assets/**/*.woff', dest: 'dist/' }],
             flatten: false,
         }),
         copy({
-            targets: [{ src: 'src/assets/**/*.svg', dest: 'dist/assets/svg' }],
+            targets: [{ src: 'src/assets/**/*.svg', dest: 'dist/' }],
+            flatten: false,
+        }),
+        copy({
+            targets: [{ src: 'src/assets/**/*.png', dest: 'dist/' }],
+            flatten: false,
+        }),
+        copy({
+            targets: [{ src: 'src/assets/**/*.css', dest: 'dist/' }],
             flatten: false,
         })
     ]
