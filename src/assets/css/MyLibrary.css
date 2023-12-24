@@ -1,5 +1,14 @@
 /* @import './inter.css'; */
 
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 50px;
+  background-color: red;
+  color: black;
+}
+
 .card {
   position: relative;
   display: inline-block;
@@ -8,15 +17,6 @@
   margin: 8px;
   background-color: #fff;
 }
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  font-size: 0;
-  background-color: white;
-  color: black;
-}
-
 
 
 .card-bottomright {
