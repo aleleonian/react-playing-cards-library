@@ -22,7 +22,7 @@ export const MyLibrary = () => {
   )
 };
 
-const FFMFMFR0 = {
+const F43MFMFR0 = {
   left: '50%',
   top: '43%',
   transform: 'translate(-50%, -50%) rotate(0)',
@@ -33,9 +33,29 @@ const FZMFMFR0 = {
   top: '0%',
   transform: 'translate(-50%, -50%) rotate(0)',
 };
+const ZZMFMFR0 = {
+  left: '0%',
+  top: '0%',
+  transform: 'translate(-50%, -50%) rotate(0)',
+};
+const HZMFMFR0 = {
+  left: '100%',
+  top: '0%',
+  transform: 'translate(-50%, -50%) rotate(0)',
+};
 
 const FHMFMFR180 = {
   left: '50%',
+  top: '100%',
+  transform: 'translate(-50%, -50%) rotate(180deg)',
+};
+const ZHMFMFR180 = {
+  left: '0%',
+  top: '100%',
+  transform: 'translate(-50%, -50%) rotate(180deg)',
+};
+const HHMFMFR180 = {
+  left: '100%',
   top: '100%',
   transform: 'translate(-50%, -50%) rotate(180deg)',
 };
@@ -49,7 +69,7 @@ export const Ace = ({ suit }) => {
   return (
     <div className={`${styles.card} ${styles['card-a']}`} style={color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={FFMFMFR0}>
+        <div className={styles['card-suit']} style={F43MFMFR0}>
           <img src={imagePath} />
         </div>
       </div>
@@ -107,7 +127,7 @@ export const Three = ({ suit }) => {
         <div className={styles['card-suit']} style={FZMFMFR0}>
           <img src={imagePath} />
         </div>
-        <div className={styles['card-suit']} style={FFMFMFR0}>
+        <div className={styles['card-suit']} style={F43MFMFR0}>
           <img src={imagePath} />
         </div>
         <div className={styles['card-suit']} style={FHMFMFR180}>
@@ -122,6 +142,41 @@ export const Three = ({ suit }) => {
       </div>
       <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
         <div className={styles['card-rank']}>3</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+    </div>
+  )
+}
+export const Four = ({ suit }) => {
+  
+  const imagePath = suitImagePaths[suit];
+
+  return (
+    <div className={`${styles.card}`} style={color333}>
+      <div className={styles['card-middle']}>
+        <div className={styles['card-suit']} style={ZZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>4</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>4</div>
         <div className={styles['card-suit']}>
           <img src={imagePath} />
         </div>
