@@ -31,8 +31,10 @@ body {
 .card-corner .card-suit, .card-corner .card-rank {
   width: 18px;
   text-align: center;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
+
 
 .card-corner .card-suit {
   margin-left: 0.5px;
@@ -89,7 +91,7 @@ body {
   position: absolute;
 }
 
-.card-a .card-middle .card-suit img {
+.card-a .cardMiddle .cardSuit img {
   height: 30px;
 }
 

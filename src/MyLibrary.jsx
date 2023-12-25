@@ -14,24 +14,43 @@ export const MyLibrary = () => {
   )
 };
 
-export const Ace = () => {
+const cardSuitStyles = {
+  left: '50%',
+  top: '50%',
+  transform: 'translate(-50%, -50%) rotate(0)',
+  // Add other styles as needed
+};
+
+const cardCardAStyles = { color: '#333' };
+
+export const Ace = ({ suit }) => {
+  console.log(`./assets/fa/${suit}.svg`);
+
+  const suitImagePaths = {
+    club: require('./assets/fa/club.svg').default,
+    heart: require('./assets/fa/heart.svg').default,
+    spade: require('./assets/fa/spade.svg').default,
+    diamond: require('./assets/fa/diamond.svg').default,
+    // Add more suits as needed
+  };
+  const imagePath = suitImagePaths[suit];
   return (
-    <div className={styles.card} style={{ color: '#333' }}>
+    <div className={`${styles.card} ${styles['card-a']}`} style={cardCardAStyles}>
       <div className={styles['card-middle']}>
-        <div className={styles.suit}>
-          <img src={require('./assets/fa/spade.svg').default} />
+        <div className={styles['card-suit']} style={cardSuitStyles}>
+          <img src={imagePath} />
         </div>
       </div>
-      <div className={`${styles.corner} ${styles['card-topleft']}`}>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
         <div className={styles['card-rank']}>A</div>
         <div className={styles['card-suit']}>
-          <img src={require('./assets/fa/spade.svg').default} />
+          <img src={imagePath} />
         </div>
       </div>
-      <div className={`${styles.corner} ${styles['card-bottomright']}`}>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
         <div className={styles['card-rank']}>A</div>
         <div className={styles['card-suit']}>
-          <img src={require('./assets/fa/spade.svg').default} />
+          <img src={imagePath} />
         </div>
       </div>
     </div>
