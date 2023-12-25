@@ -184,3 +184,41 @@ export const Four = ({ suit }) => {
     </div>
   )
 }
+export const Five = ({ suit }) => {
+  
+  const imagePath = suitImagePaths[suit];
+
+  return (
+    <div className={`${styles.card}`} style={color333}>
+      <div className={styles['card-middle']}>
+        <div className={styles['card-suit']} style={ZZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={F43MFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>5</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>5</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+    </div>
+  )
+}
