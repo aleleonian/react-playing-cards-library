@@ -16,21 +16,21 @@ export const MyLibrary = () => {
 
 export const Ace = () => {
   return (
-    <div className={styles.card}>
-      <div className="card-middle">
-        <div className="suit">
+    <div className={styles.card} style={{ color: '#333' }}>
+      <div className={styles['card-middle']}>
+        <div className={styles.suit}>
           <img src={require('./assets/fa/spade.svg').default} />
         </div>
       </div>
-      <div className="corner card-topleft">
-        <div className="card-rank">A</div>
-        <div className="card-suit">
+      <div className={`${styles.corner} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>A</div>
+        <div className={styles['card-suit']}>
           <img src={require('./assets/fa/spade.svg').default} />
         </div>
       </div>
-      <div className="card-corner card-bottomright">
-        <div className="card-rank">A</div>
-        <div className="card-suit">
+      <div className={`${styles.corner} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>A</div>
+        <div className={styles['card-suit']}>
           <img src={require('./assets/fa/spade.svg').default} />
         </div>
       </div>
