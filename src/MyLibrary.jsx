@@ -24,7 +24,7 @@ export const MyLibrary = () => {
 
 const FFMFMFR0 = {
   left: '50%',
-  top: '50%',
+  top: '43%',
   transform: 'translate(-50%, -50%) rotate(0)',
 };
 
