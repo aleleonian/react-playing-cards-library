@@ -5,30 +5,32 @@ import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import svgr from '@svgr/rollup';
 import copy from 'rollup-plugin-copy';
+import css from 'rollup-plugin-css-only';
 
 export default {
     input: 'src/MyLibrary.jsx',
     output: {
-        file: 'dist/MyLibrary.jsx',
+        file: 'dist/MyLibrary.js',
         format: 'cjs',
     },
     plugins: [
         resolve(),
         commonjs(),
-        babel({
-            exclude: 'node_modules/**',
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-        }),
         postcss({
             // extract: true, // Extract CSS to separate file
             modules: true, // Enable CSS modules if needed
             // minimize: true, // Minify the CSS
-          }),
+        }),
+        babel({
+            exclude: 'node_modules/**',
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+        }),
         svgr(), // Handle SVG files
         copy({
             targets: [{ src: 'src/assets/**/*.woff', dest: 'dist/' }],
             flatten: false,
-        }),        copy({
+        }),
+        copy({
             targets: [{ src: 'src/assets/**/*.woff2', dest: 'dist/' }],
             flatten: false,
         }),
@@ -38,10 +40,6 @@ export default {
         }),
         copy({
             targets: [{ src: 'src/assets/**/*.png', dest: 'dist/' }],
-            flatten: false,
-        }),
-        copy({
-            targets: [{ src: 'src/assets/**/*.css', dest: 'dist/' }],
             flatten: false,
         })
     ]
