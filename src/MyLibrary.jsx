@@ -74,6 +74,11 @@ const HHMFMFR180 = {
   top: '100%',
   transform: 'translate(-50%, -50%) rotate(180deg)',
 };
+const FEMFMFR180 = {
+  left: '50%',
+  top: '80%',
+  transform: 'translate(-50%, -50%) rotate(180deg)',
+};
 
 const color333 = { color: '#333' };
 
@@ -315,6 +320,53 @@ export const Seven = ({ suit }) => {
       </div>
       <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
         <div className={styles['card-rank']}>7</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+    </div>
+  )
+}
+export const Eight = ({ suit }) => {
+  
+  const imagePath = suitImagePaths[suit];
+
+  return (
+    <div className={`${styles.card}`} style={color333}>
+      <div className={styles['card-middle']}>
+        <div className={styles['card-suit']} style={ZZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={F23MFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZF3MFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HF3MFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={FEMFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>8</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>8</div>
         <div className={styles['card-suit']}>
           <img src={imagePath} />
         </div>
