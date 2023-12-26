@@ -539,3 +539,73 @@ export const Jack = ({ suit }) => {
     </div>
   )
 }
+export const Queen = ({ suit }) => {
+
+  const queenImagePaths = {
+    club: require('./assets/graphics/qc.svg').default,
+    heart: require('./assets/graphics/qh.svg').default,
+    spade: require('./assets/graphics/qs.svg').default,
+    diamond: require('./assets/graphics/qd.svg').default,
+  };
+
+  const queenImagePath = queenImagePaths[suit];
+  const suitImagePath = suitImagePaths[suit];
+  const queenStyle = {
+    backgroundImage: `url(${queenImagePath})`,
+  };
+
+  return (
+    <div className={`${styles.card}`} style={color333}>
+      <div className={styles['card-royal']} style={queenStyle}></div>
+      <div className={styles['card-middle']}>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>Q</div>
+        <div className={styles['card-suit']}>
+          <img src={suitImagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>Q</div>
+        <div className={styles['card-suit']}>
+          <img src={suitImagePath} />
+        </div>
+      </div>
+    </div>
+  )
+}
+export const King = ({ suit }) => {
+
+  const kingImagePaths = {
+    club: require('./assets/graphics/kc.svg').default,
+    heart: require('./assets/graphics/kh.svg').default,
+    spade: require('./assets/graphics/ks.svg').default,
+    diamond: require('./assets/graphics/kd.svg').default,
+  };
+
+  const kingImagePath = kingImagePaths[suit];
+  const suitImagePath = suitImagePaths[suit];
+  const kingStyle = {
+    backgroundImage: `url(${kingImagePath})`,
+  };
+
+  return (
+    <div className={`${styles.card}`} style={color333}>
+      <div className={styles['card-royal']} style={kingStyle}></div>
+      <div className={styles['card-middle']}>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>K</div>
+        <div className={styles['card-suit']}>
+          <img src={suitImagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>K</div>
+        <div className={styles['card-suit']}>
+          <img src={suitImagePath} />
+        </div>
+      </div>
+    </div>
+  )
+}
