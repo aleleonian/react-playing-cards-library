@@ -27,6 +27,11 @@ const FF3MFMFR0 = {
   top: '43%',
   transform: 'translate(-50%, -50%) rotate(0)',
 };
+const FSTMFMFR0 = {
+  left: '50%',
+  top: '10%',
+  transform: 'translate(-50%, -50%) rotate(0)',
+};
 
 const FMTMFMFR0 = {
   left: '50%',
@@ -87,7 +92,7 @@ const HHTMFMFR180 = {
 };
 const FEMFMFR180 = {
   left: '50%',
-  top: '80%',
+  top: '90%',
   transform: 'translate(-50%, -50%) rotate(180deg)',
 };
 const ZSFMFR180 = {
@@ -438,6 +443,59 @@ export const Nine = ({ suit }) => {
       </div>
       <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
         <div className={styles['card-rank']}>9</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+    </div>
+  )
+}
+export const Ten = ({ suit }) => {
+  
+  const imagePath = suitImagePaths[suit];
+
+  return (
+    <div className={`${styles.card}`} style={color333}>
+      <div className={styles['card-middle']}>
+        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HMTMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={FSTMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZTTMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HTTMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZSFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HSFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={FEMFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HHTMFMFR180}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>10</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>10</div>
         <div className={styles['card-suit']}>
           <img src={imagePath} />
         </div>
