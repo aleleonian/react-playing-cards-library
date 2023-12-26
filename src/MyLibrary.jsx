@@ -38,9 +38,19 @@ const ZZMFMFR0 = {
   top: '0%',
   transform: 'translate(-50%, -50%) rotate(0)',
 };
+const Z43MFMFR0 = {
+  left: '0%',
+  top: '43%',
+  transform: 'translate(-50%, -50%) rotate(0)',
+};
 const HZMFMFR0 = {
   left: '100%',
   top: '0%',
+  transform: 'translate(-50%, -50%) rotate(0)',
+};
+const H43MFMFR0 = {
+  left: '100%',
+  top: '43%',
   transform: 'translate(-50%, -50%) rotate(0)',
 };
 
@@ -215,6 +225,47 @@ export const Five = ({ suit }) => {
       </div>
       <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
         <div className={styles['card-rank']}>5</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+    </div>
+  )
+}
+export const Six = ({ suit }) => {
+  
+  const imagePath = suitImagePaths[suit];
+
+  return (
+    <div className={`${styles.card}`} style={color333}>
+      <div className={styles['card-middle']}>
+        <div className={styles['card-suit']} style={ZZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HZMFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={Z43MFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={H43MFMFR0}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={ZHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+        <div className={styles['card-suit']} style={HHMFMFR180}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
+        <div className={styles['card-rank']}>6</div>
+        <div className={styles['card-suit']}>
+          <img src={imagePath} />
+        </div>
+      </div>
+      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
+        <div className={styles['card-rank']}>6</div>
         <div className={styles['card-suit']}>
           <img src={imagePath} />
         </div>
