@@ -1,5 +1,5 @@
 import React from 'react';
-// import './assets/css/styles.css';
+import backImagePath from './assets/graphics/bg.png';
 
 //TODO: this fixed the fact that now the custom classes are being applied to the app
 // but something in the build process breaks the names of the classes by adding spaces
@@ -606,6 +606,23 @@ export const King = ({ suit }) => {
           <img src={suitImagePath} />
         </div>
       </div>
+    </div>
+  )
+}
+export const Back = () => {
+
+  // const backImagePath = { "back": require('./assets/graphics/bg.svg').default }
+  // const backImagePath = require('./assets/graphics/bg.png').default;
+
+  console.log("backImagePath:", backImagePath);
+
+  const backStyle = {
+    backgroundImage: `url(${backImagePath})`,
+  };
+
+  return (
+    <div className={`${styles.card}`}>
+      <div className={styles['card-back']} style={backStyle}></div>
     </div>
   )
 }

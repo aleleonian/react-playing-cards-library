@@ -5,6 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import svgr from '@svgr/rollup';
 import copy from 'rollup-plugin-copy';
+import url from 'rollup-plugin-url';
 
 export default {
     input: 'src/PokerPlayingCards.jsx',
@@ -38,8 +39,13 @@ export default {
             flatten: false,
         }),
         copy({
-            targets: [{ src: 'src/assets/**/*.png', dest: 'dist/' }],
+            targets: [{ src: 'src/assets/**/*.jpg', dest: 'dist/' }],
             flatten: false,
+        }),
+        url({
+            include: ['**/*.png'],
+            limit: Infinity, // Embed all images as data URIs
+            emitFiles: true,
         })
     ]
 };
