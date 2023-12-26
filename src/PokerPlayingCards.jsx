@@ -14,7 +14,7 @@ const suitImagePaths = {
   // Add more suits as needed
 };
 
-export const MyLibrary = () => {
+export const PokerPlayingCards = () => {
   return (
     <div>
       This is my React library yea!!

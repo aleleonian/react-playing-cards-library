@@ -5,12 +5,11 @@ import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import svgr from '@svgr/rollup';
 import copy from 'rollup-plugin-copy';
-import css from 'rollup-plugin-css-only';
 
 export default {
-    input: 'src/MyLibrary.jsx',
+    input: 'src/PokerPlayingCards.jsx',
     output: {
-        file: 'dist/MyLibrary.js',
+        file: 'dist/PokerPlayingCards.js',
         format: 'cjs',
     },
     plugins: [

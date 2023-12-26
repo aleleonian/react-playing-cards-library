@@ -1,6 +1,6 @@
 {
   "name": "my-react-library-test-project",
-  "main": "dist/MyLibrary.js",
+  "main": "dist/PokerPlayingCards.js",
   "style": "dist/assets/css/styles.css",
   "files": [
     "dist"
@@ -15,6 +15,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -51,7 +52,6 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "peerDependencies": {
