@@ -5,8 +5,6 @@ import styles from './assets/css/styles.css';
 
 export const Back = () => {
 
-  console.log("backImagePath:", backImagePath);
-
   const backStyle = {
     backgroundImage: `url(${backImagePath})`,
   };
