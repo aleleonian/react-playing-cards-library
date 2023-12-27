@@ -1,17 +1,11 @@
 import React from 'react';
-import backImagePath from './assets/graphics/bg.png';
 //TODO: this fixed the fact that now the custom classes are being applied to the app
 // but something in the build process breaks the names of the classes by adding spaces
 // between characters
+import { Back } from './Back.jsx';
+import { Joker } from './Joker.jsx';
+import * as Constants from './Constants.jsx';
 import styles from './assets/css/styles.css';
-
-const suitImagePaths = {
-  club: require('./assets/fa/club.svg').default,
-  heart: require('./assets/fa/heart.svg').default,
-  spade: require('./assets/fa/spade.svg').default,
-  diamond: require('./assets/fa/diamond.svg').default,
-  // Add more suits as needed
-};
 
 export const PokerPlayingCards = () => {
   return (
@@ -21,100 +15,14 @@ export const PokerPlayingCards = () => {
   )
 };
 
-const FF3MFMFR0 = {
-  left: '50%',
-  top: '43%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-const FSTMFMFR0 = {
-  left: '50%',
-  top: '10%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-
-const FMTMFMFR0 = {
-  left: '50%',
-  top: '-10%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-const ZMTMFMFR0 = {
-  left: '0%',
-  top: '-10%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-const ZF3MFMFR0 = {
-  left: '0%',
-  top: '43%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-const F23MFMFR0 = {
-  left: '50%',
-  top: '23%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-const ZTTMFMFR0 = {
-  left: '0%',
-  top: '23%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-const HTTMFMFR0 = {
-  left: '100%',
-  top: '23%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-
-const HMTMFMFR0 = {
-  left: '100%',
-  top: '-10%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-const HF3MFMFR0 = {
-  left: '100%',
-  top: '43%',
-  transform: 'translate(-50%, -50%) rotate(0)',
-};
-
-const FHTMFMFR180 = {
-  left: '50%',
-  top: '110%',
-  transform: 'translate(-50%, -50%) rotate(180deg)',
-};
-const ZHTMFMFR180 = {
-  left: '0%',
-  top: '110%',
-  transform: 'translate(-50%, -50%) rotate(180deg)',
-};
-const HHTMFMFR180 = {
-  left: '100%',
-  top: '110%',
-  transform: 'translate(-50%, -50%) rotate(180deg)',
-};
-const FEMFMFR180 = {
-  left: '50%',
-  top: '90%',
-  transform: 'translate(-50%, -50%) rotate(180deg)',
-};
-const ZSFMFR180 = {
-  left: '0%',
-  top: '75%',
-  transform: 'translate(-50%, -50%) rotate(180deg)',
-};
-const HSFMFR180 = {
-  left: '100%',
-  top: '75%',
-  transform: 'translate(-50%, -50%) rotate(180deg)',
-};
-
-const color333 = { color: '#333' };
-
 export const Ace = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card} ${styles['card-a']}`} style={color333}>
+    <div className={`${styles.card} ${styles['card-a']}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={FF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.FF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -135,15 +43,15 @@ export const Ace = ({ suit }) => {
 }
 export const Two = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card} ${styles['card-2']}`} style={color333}>
+    <div className={`${styles.card} ${styles['card-2']}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={FMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.FMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.FHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -164,18 +72,18 @@ export const Two = ({ suit }) => {
 }
 export const Three = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={FMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.FMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.FF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.FHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -196,21 +104,21 @@ export const Three = ({ suit }) => {
 }
 export const Four = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -231,24 +139,24 @@ export const Four = ({ suit }) => {
 }
 export const Five = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.FF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -269,27 +177,27 @@ export const Five = ({ suit }) => {
 }
 export const Six = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -310,30 +218,30 @@ export const Six = ({ suit }) => {
 }
 export const Seven = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={F23MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.F23MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -354,33 +262,33 @@ export const Seven = ({ suit }) => {
 }
 export const Eight = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={F23MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.F23MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FEMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.FEMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -401,36 +309,36 @@ export const Eight = ({ suit }) => {
 }
 export const Nine = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZTTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZTTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HTTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HTTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FF3MFMFR0}>
+        <div className={styles['card-suit']} style={Constants.FF3MFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZSFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZSFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HSFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HSFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -451,39 +359,39 @@ export const Nine = ({ suit }) => {
 }
 export const Ten = ({ suit }) => {
 
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={ZMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HMTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HMTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FSTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.FSTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZTTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.ZTTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HTTMFMFR0}>
+        <div className={styles['card-suit']} style={Constants.HTTMFMFR0}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZSFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZSFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HSFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HSFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={FEMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.FEMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={ZHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.ZHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
-        <div className={styles['card-suit']} style={HHTMFMFR180}>
+        <div className={styles['card-suit']} style={Constants.HHTMFMFR180}>
           <img src={suitImagePath} />
         </div>
       </div>
@@ -512,14 +420,14 @@ export const Jack = ({ suit }) => {
   };
 
   const jackImagePath = jackImagePaths[suit];
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
   const jackStyle = {
     backgroundImage: `url(${jackImagePath})`,
     /* Add other styles as needed */
   };
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-royal']} style={jackStyle}></div>
       <div className={styles['card-middle']}>
       </div>
@@ -548,13 +456,13 @@ export const Queen = ({ suit }) => {
   };
 
   const queenImagePath = queenImagePaths[suit];
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
   const queenStyle = {
     backgroundImage: `url(${queenImagePath})`,
   };
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-royal']} style={queenStyle}></div>
       <div className={styles['card-middle']}>
       </div>
@@ -583,13 +491,13 @@ export const King = ({ suit }) => {
   };
 
   const kingImagePath = kingImagePaths[suit];
-  const suitImagePath = suitImagePaths[suit];
+  const suitImagePath = Constants.suitImagePaths[suit];
   const kingStyle = {
     backgroundImage: `url(${kingImagePath})`,
   };
 
   return (
-    <div className={`${styles.card}`} style={color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-royal']} style={kingStyle}></div>
       <div className={styles['card-middle']}>
       </div>
@@ -608,17 +516,5 @@ export const King = ({ suit }) => {
     </div>
   )
 }
-export const Back = () => {
 
-  console.log("backImagePath:", backImagePath);
-
-  const backStyle = {
-    backgroundImage: `url(${backImagePath})`,
-  };
-
-  return (
-    <div className={`${styles.card}`}>
-      <div className={styles['card-back']} style={backStyle}></div>
-    </div>
-  )
-}
+export { Back, Joker };
