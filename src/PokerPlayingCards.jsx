@@ -4,6 +4,8 @@ import React from 'react';
 // between characters
 import { Back } from './Back.jsx';
 import { Joker } from './Joker.jsx';
+import { Ace } from './Ace.jsx';
+
 import * as Constants from './Constants.jsx';
 import styles from './assets/css/styles.css';
 
@@ -15,38 +17,12 @@ export const PokerPlayingCards = () => {
   )
 };
 
-export const Ace = ({ suit }) => {
-
-  const suitImagePath = Constants.suitImagePaths[suit];
-
-  return (
-    <div className={`${styles.card} ${styles['card-a']}`} style={Constants.color333}>
-      <div className={styles['card-middle']}>
-        <div className={styles['card-suit']} style={Constants.FF3MFMFR0}>
-          <img src={suitImagePath} />
-        </div>
-      </div>
-      <div className={`${styles['card-corner']} ${styles['card-topleft']}`}>
-        <div className={styles['card-rank']}>A</div>
-        <div className={styles['card-suit']}>
-          <img src={suitImagePath} />
-        </div>
-      </div>
-      <div className={`${styles['card-corner']} ${styles['card-bottomright']}`}>
-        <div className={styles['card-rank']}>A</div>
-        <div className={styles['card-suit']}>
-          <img src={suitImagePath} />
-        </div>
-      </div>
-    </div>
-  )
-}
 export const Two = ({ suit }) => {
 
   const suitImagePath = Constants.suitImagePaths[suit];
 
   return (
-    <div className={`${styles.card} ${styles['card-2']}`} style={Constants.color333}>
+    <div className={`${styles.card}`} style={Constants.color333}>
       <div className={styles['card-middle']}>
         <div className={styles['card-suit']} style={Constants.FMTMFMFR0}>
           <img src={suitImagePath} />
@@ -517,4 +493,4 @@ export const King = ({ suit }) => {
   )
 }
 
-export { Back, Joker };
+export { Back, Joker, Ace};
